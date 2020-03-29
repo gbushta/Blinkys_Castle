@@ -141,7 +141,17 @@ while True:
         # Now I have to check for button presses A or B to
         # see which direction Blinky is facing.  Button A
         # is facing right. Button B is facing left.
-        if button_a.value:
+        #
+        # OMG I forgot to add if A and B are pressed
+        # Just do nothing, or stay in place?
+        if button_a.value and button_b.value:
+            if going_right:
+                which_blinky = 0
+                blinky[0] = blinky_walk[which_blinky]
+            else:
+                which_blinky = 0
+                blinky[0] = blinky_walk2[which_blinky]
+        elif button_a.value:
             going_right = True
             blinky[0] = blinky_walk[which_blinky]
             blinky.x += 3
