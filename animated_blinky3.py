@@ -74,7 +74,7 @@ castle = displayio.TileGrid(sprite_sheet, pixel_shader=palette,
 
 # Create a Group to hold the sprite and add it
 sprite_group = displayio.Group()
-sprite_group.append(sprite)
+# sprite_group.append(sprite)
 sprite_group.append(sprite2)
 sprite_group.append(blinky)
 
@@ -110,8 +110,8 @@ for y in range(1, 6):
 for x in range(1, 6):
     for y in range(1, 6):
         castle[x, y] = 7 # floor
-castle[0, 3] = 7
-castle[6, 3] = 7
+castle[0, 3] = 0
+castle[6, 3] = 0
 
 # put the sprite somewhere in the castle
 sprite.x = 110
